@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bernici Tech — Software &amp; Hardware for Libyan Business</title>
+  <meta name="description" content="Bernici Tech builds websites, apps and custom software, and supplies the hardware to run it — POS terminals, cashier systems, printers and more. One partner for software and hardware in Libya." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@300;400;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles-v2.css" />
+</head>
+<body>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <!-- ================= Nav ================= -->
+  <header class="nav">
+    <div class="nav__inner">
+      <a href="#top" class="brand" aria-label="Bernici Tech — home">
+        Bernici Tech <span class="brand__ref">LY</span>
+      </a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#how" data-i18n="nav_how">How it works</a>
+        <a href="#hardware" data-i18n="nav_hardware">Hardware</a>
+        <a href="#work" data-i18n="nav_work">Work</a>
+        <a href="#why" data-i18n="nav_why">Why us</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="lang" id="langToggle" type="button" aria-label="Switch language / تغيير اللغة">
+          <span class="lang__en">EN</span><span class="lang__sep">/</span><span class="lang__ar">ع</span>
+        </button>
+        <a class="btn btn--solid nav__cta" href="#contact" data-i18n="nav_cta">Get started</a>
+        <button class="burger" id="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="drawer">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="nav__drawer" id="drawer">
+      <a href="#how" data-i18n="nav_how">How it works</a>
+      <a href="#hardware" data-i18n="nav_hardware">Hardware</a>
+      <a href="#work" data-i18n="nav_work">Work</a>
+      <a href="#why" data-i18n="nav_why">Why us</a>
+      <a href="#contact" data-i18n="nav_contact">Contact</a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ================= Hero ================= -->
+    <section class="hero">
+      <div class="hero__inner">
+        <div class="hero__copy rv">
+          <p class="label"><span data-i18n="hero_eyebrow">software + hardware · Libya</span></p>
+
+          <h1 class="hero__title">
+            <span data-i18n="hero_title_1">We build the</span>
+            <span class="hero__rot" id="rotator" aria-live="polite">software</span>
+            <span data-i18n="hero_title_2">and sell the hardware to run it.</span>
+          </h1>
+
+          <p class="hero__sub" data-i18n="hero_sub">Websites, mobile apps and custom systems — plus the POS terminals, cashiers and devices your business runs on. One partner, from the code to the counter.</p>
+
+          <div class="hero__cta">
+            <a class="btn btn--solid btn--lg" href="#contact" data-i18n="nav_cta">Get started</a>
+            <a class="btn btn--line btn--lg" href="#software" data-i18n="hero_cta_1">See our services</a>
+          </div>
+
+          <ul class="hero__spec" aria-label="At a glance">
+            <li><b>01</b><span data-i18n="badge_1">Software built in-house</span></li>
+            <li><b>02</b><span data-i18n="badge_2">Hardware supplied &amp; set up</span></li>
+            <li><b>03</b><span data-i18n="badge_3">Local support across Libya</span></li>
+          </ul>
+        </div>
+
+        <div class="hero__plate rv">
+          <div class="plate">
+            <!-- Technical drawing: the counter terminal, drawn not rendered -->
+            <svg class="plate__draw" viewBox="0 0 240 256" role="img" aria-labelledby="plateTitle">
+              <title id="plateTitle">Technical drawing of a Bernici POS terminal</title>
+
+              <!-- height dimension -->
+              <g class="dim">
+                <line x1="20" y1="24" x2="20" y2="212" />
+                <line x1="15" y1="24" x2="25" y2="24" />
+                <line x1="15" y1="212" x2="25" y2="212" />
+              </g>
+              <text class="dimtx" x="10" y="118" transform="rotate(-90 10 118)" text-anchor="middle">340 MM</text>
+
+              <!-- housing -->
+              <rect class="fillp" x="42" y="24" width="158" height="112" rx="5" />
+              <rect class="screen" x="52" y="34" width="138" height="82" />
+              <rect class="px-rust" x="60" y="43" width="44" height="5" rx="2.5" />
+              <rect class="px-mute" x="60" y="56" width="76" height="4" rx="2" />
+              <rect class="px-mute" x="60" y="66" width="60" height="4" rx="2" />
+              <rect class="px-mute" x="60" y="76" width="70" height="4" rx="2" />
+              <rect class="px-rust" x="60" y="96" width="50" height="12" rx="6" />
+
+              <!-- printer slot -->
+              <line class="ln ln--thin" x1="62" y1="127" x2="180" y2="127" />
+
+              <!-- neck + base -->
+              <path class="fillp" d="M105 136 h32 v40 h-32 z" />
+              <path class="fillp" d="M64 212 L84 176 h74 l20 36 z" />
+              <line class="ln ln--thin" x1="74" y1="204" x2="168" y2="204" />
+
+              <!-- leader + ref -->
+              <g class="dim">
+                <circle cx="196" cy="60" r="2" />
+                <line x1="196" y1="60" x2="222" y2="42" />
+              </g>
+              <text class="dimtx" x="232" y="36" text-anchor="end">REF. BT-T2</text>
+
+              <!-- width dimension -->
+              <g class="dim">
+                <line x1="64" y1="228" x2="178" y2="228" />
+                <line x1="64" y1="223" x2="64" y2="233" />
+                <line x1="178" y1="223" x2="178" y2="233" />
+              </g>
+              <text class="dimtx" x="121" y="246" text-anchor="middle">215 MM</text>
+            </svg>
+
+            <!-- The receipt it prints -->
+            <div class="tape" aria-hidden="true">
+              <div class="tape__hd">BERNICI POS</div>
+              <div class="tape__rows" id="tapeRows"></div>
+              <div class="tape__tot">
+                <span data-i18n="pos_total">Total</span>
+                <span><span id="tapeTotal">0</span> LYD</span>
+              </div>
+              <div class="tape__paid" id="tapePaid" data-i18n="pos_paid">Paid</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Ledger strip ================= -->
+    <section class="ledger">
+      <div class="ledger__inner">
+        <div class="ledger__item rv"><span class="ledger__n">2</span><span class="ledger__t" data-i18n="vprop_1">sides — software &amp; hardware, one team</span></div>
+        <div class="ledger__item rv"><span class="ledger__n">1</span><span class="ledger__t" data-i18n="vprop_2">partner from the code to the counter</span></div>
+        <div class="ledger__item rv"><span class="ledger__n">∞</span><span class="ledger__t" data-i18n="vprop_3">support after you go live</span></div>
+      </div>
+    </section>
+
+    <!-- ================= What we do ================= -->
+    <section class="band band--paper band-pad" id="software">
+      <div class="wrap">
+        <div class="head rv">
+          <p class="label"><span data-i18n="dual_eyebrow">what we do</span></p>
+          <h2 class="head__title" data-i18n="dual_title">Two halves of one business</h2>
+          <p class="head__lead" data-i18n="dual_lead">Most companies make you deal with a developer and a hardware supplier separately. We are both — so your systems and your devices actually work together.</p>
+        </div>
+
+        <div class="dual__grid">
+          <div class="rv">
+            <div class="col__hd">
+              <span class="col__n">01</span>
+              <h3 class="col__t" data-i18n="dual_sw_title">Software</h3>
+            </div>
+            <p class="col__desc" data-i18n="dual_sw_desc">We design and build the digital side of your business — from a first website to a full management system.</p>
+            <ul class="speclist">
+              <li><span data-i18n="dual_sw_1">Business websites &amp; landing pages</span></li>
+              <li><span data-i18n="dual_sw_2">Mobile apps for iOS &amp; Android</span></li>
+              <li><span data-i18n="dual_sw_3">Online ordering &amp; e-commerce</span></li>
+              <li><span data-i18n="dual_sw_4">Custom management systems</span></li>
+              <li><span data-i18n="dual_sw_5">POS &amp; cashier software</span></li>
+            </ul>
+          </div>
+
+          <div class="rv">
+            <div class="col__hd">
+              <span class="col__n">02</span>
+              <h3 class="col__t" data-i18n="dual_hw_title">Hardware</h3>
+            </div>
+            <p class="col__desc" data-i18n="dual_hw_desc">We supply, set up and support the physical devices your business runs on every day.</p>
+            <ul class="speclist">
+              <li><span data-i18n="dual_hw_1">POS terminals &amp; cashier systems</span></li>
+              <li><span data-i18n="dual_hw_2">Receipt &amp; label printers</span></li>
+              <li><span data-i18n="dual_hw_3">Barcode scanners</span></li>
+              <li><span data-i18n="dual_hw_4">Cash drawers</span></li>
+              <li><span data-i18n="dual_hw_5">Card &amp; payment readers</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= How it works ================= -->
+    <section class="band band--night band-pad" id="how">
+      <div class="wrap">
+        <div class="head rv">
+          <p class="label"><span data-i18n="how_eyebrow">how it works</span></p>
+          <h2 class="head__title" data-i18n="how_title">One system, from tap to receipt</h2>
+          <p class="head__lead" data-i18n="how_lead">Scroll through a real sale — the software and the hardware, working as one.</p>
+        </div>
+
+        <ol class="steps" id="steps">
+          <li class="step"><span class="step__n">01</span><h3 data-i18n="how_1_t">Ring up the sale</h3><p data-i18n="how_1_d">Add items on a fast touchscreen — your menu or products, one tap each.</p></li>
+          <li class="step"><span class="step__n">02</span><h3 data-i18n="how_2_t">Take the payment</h3><p data-i18n="how_2_d">Card, tap or cash — the reader talks straight to the till.</p></li>
+          <li class="step"><span class="step__n">03</span><h3 data-i18n="how_3_t">Print the receipt</h3><p data-i18n="how_3_d">A branded receipt prints in seconds — or send it to the customer's phone.</p></li>
+          <li class="step"><span class="step__n">04</span><h3 data-i18n="how_4_t">See your sales</h3><p data-i18n="how_4_d">Every sale lands in one dashboard — daily totals, best sellers and staff.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ================= Hardware catalogue ================= -->
+    <section class="band band--paper band-pad" id="hardware">
+      <div class="wrap">
+        <div class="head rv">
+          <p class="label"><span data-i18n="lineup_eyebrow">point of sale</span></p>
+          <h2 class="head__title" data-i18n="lineup_title">Hardware, ready to sell</h2>
+          <p class="head__lead" data-i18n="lineup_lead">Pick the devices that fit your shop — we supply them, set them up and support them.</p>
+        </div>
+
+        <div class="cat">
+          <!-- 01 -->
+          <article class="cat__row rv">
+            <div class="cat__ref">BT-01<br />01 / 06</div>
+            <svg class="cat__draw" viewBox="0 0 100 100" aria-hidden="true">
+              <rect class="fillp" x="22" y="14" width="56" height="40" rx="3" />
+              <rect class="scr" x="27" y="19" width="46" height="30" />
+              <path class="fillp" d="M44 54 h12 v14 h-12 z" />
+              <path class="fillp" d="M28 84 L36 68 h28 l8 16 z" />
+              <line class="ln--thin" x1="34" y1="79" x2="66" y2="79" />
+              <line class="ln--thin" x1="30" y1="50" x2="70" y2="50" />
+            </svg>
+            <div class="cat__body">
+              <h3 class="cat__name" data-i18n="prod_1_t">Sunmi T2 terminal</h3>
+              <p class="cat__desc" data-i18n="prod_1_d">Desktop touchscreen POS for the counter — big screen, fast checkout, printer built in.</p>
+            </div>
+          </article>
+
+          <!-- 02 -->
+          <article class="cat__row rv">
+            <div class="cat__ref">BT-02<br />02 / 06</div>
+            <svg class="cat__draw" viewBox="0 0 100 100" aria-hidden="true">
+              <rect class="fillp" x="34" y="10" width="32" height="76" rx="5" />
+              <rect class="scr" x="39" y="17" width="22" height="34" />
+              <circle class="ln" cx="50" cy="61" r="5" />
+              <line class="ln--thin" x1="42" y1="77" x2="58" y2="77" />
+              <circle class="ln--thin" cx="58" cy="14" r="1.5" />
+            </svg>
+            <div class="cat__body">
+              <h3 class="cat__name" data-i18n="prod_2_t">Sunmi V2s</h3>
+              <p class="cat__desc" data-i18n="prod_2_d">Handheld Android POS — take orders and payments anywhere in the shop.</p>
+            </div>
+          </article>
+
+          <!-- 03 -->
+          <article class="cat__row rv">
+            <div class="cat__ref">BT-03<br />03 / 06</div>
+            <svg class="cat__draw" viewBox="0 0 100 100" aria-hidden="true">
+              <rect class="fillp" x="26" y="18" width="34" height="70" rx="5" />
+              <rect class="scr" x="31" y="25" width="24" height="30" />
+              <circle class="ln" cx="43" cy="65" r="4.5" />
+              <line class="ln--thin" x1="34" y1="80" x2="52" y2="80" />
+              <path class="fillp" d="M62 24 h22 v36 l-3.7 -4 -3.7 4 -3.6 -4 -3.7 4 -3.7 -4 -3.6 4 z" />
+              <line class="ln--thin" x1="66" y1="33" x2="80" y2="33" />
+              <line class="ln--thin" x1="66" y1="40" x2="80" y2="40" />
+              <line class="ln--thin" x1="66" y1="47" x2="75" y2="47" />
+            </svg>
+            <div class="cat__body">
+              <h3 class="cat__name" data-i18n="prod_3_t">Sunmi V2s Plus</h3>
+              <p class="cat__desc" data-i18n="prod_3_d">Handheld with a built-in 80mm receipt printer, running Android 11.</p>
+            </div>
+          </article>
+
+          <!-- 04 -->
+          <article class="cat__row rv">
+            <div class="cat__ref">BT-04<br />04 / 06</div>
+            <svg class="cat__draw" viewBox="0 0 100 100" aria-hidden="true">
+              <path class="fillp" d="M20 24 h30 v16 h-16 l-4 34 h-12 z" />
+              <line class="ln--thin" x1="26" y1="44" x2="32" y2="44" />
+              <line class="ln--thin dash" x1="52" y1="32" x2="72" y2="46" />
+              <rect class="fillp" x="66" y="50" width="24" height="26" />
+              <line class="ln" x1="71" y1="56" x2="71" y2="70" />
+              <line class="ln--thin" x1="75" y1="56" x2="75" y2="70" />
+              <line class="ln" x1="80" y1="56" x2="80" y2="70" />
+              <line class="ln--thin" x1="85" y1="56" x2="85" y2="70" />
+            </svg>
+            <div class="cat__body">
+              <h3 class="cat__name" data-i18n="prod_4_t">Readers &amp; scanners</h3>
+              <p class="cat__desc" data-i18n="prod_4_d">Card readers, barcode scanners and cash drawers to finish your setup.</p>
+            </div>
+          </article>
+
+          <!-- 05 -->
+          <article class="cat__row rv">
+            <div class="cat__ref">BT-05<br />05 / 06</div>
+            <svg class="cat__draw" viewBox="0 0 100 100" aria-hidden="true">
+              <rect class="fillp" x="18" y="48" width="64" height="34" rx="2" />
+              <line class="ln--thin" x1="24" y1="61" x2="76" y2="61" />
+              <line class="ln" x1="42" y1="71" x2="58" y2="71" />
+              <rect class="fillp" x="32" y="20" width="36" height="26" rx="2" />
+              <rect class="scr" x="37" y="25" width="26" height="16" />
+            </svg>
+            <div class="cat__body">
+              <h3 class="cat__name" data-i18n="prod_5_t">Cashier &amp; cash drawer</h3>
+              <p class="cat__desc" data-i18n="prod_5_d">A cash register with a lockable drawer that pops open with every sale.</p>
+            </div>
+          </article>
+
+          <!-- 06 -->
+          <article class="cat__row rv">
+            <div class="cat__ref">BT-06<br />06 / 06</div>
+            <svg class="cat__draw" viewBox="0 0 100 100" aria-hidden="true">
+              <rect class="fillp" x="10" y="20" width="40" height="30" rx="3" />
+              <rect class="scr" x="15" y="25" width="30" height="20" />
+              <path class="fillp" d="M24 50 h12 v8 h-12 z" />
+              <path class="fillp" d="M14 76 L22 58 h20 l8 18 z" />
+              <rect class="fillp" x="58" y="30" width="30" height="22" rx="2" />
+              <line class="ln--thin" x1="63" y1="39" x2="83" y2="39" />
+              <rect class="fillp" x="56" y="60" width="34" height="18" rx="2" />
+              <line class="ln" x1="66" y1="70" x2="80" y2="70" />
+            </svg>
+            <div class="cat__body">
+              <h3 class="cat__name" data-i18n="prod_6_t">Complete POS setup</h3>
+              <p class="cat__desc" data-i18n="prod_6_d">Terminal, printer, drawer and reader — installed and ready to sell.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Capabilities ================= -->
+    <section class="band band--tint band-pad">
+      <div class="wrap">
+        <div class="head rv">
+          <p class="label"><span data-i18n="svc_eyebrow">capabilities</span></p>
+          <h2 class="head__title" data-i18n="svc_title">Everything under one roof</h2>
+        </div>
+
+        <dl class="caps">
+          <div class="cap rv"><dt data-i18n="svc_1_t">Websites</dt><dd data-i18n="svc_1_d">Fast, modern sites that look right on every phone and bring you customers.</dd></div>
+          <div class="cap rv"><dt data-i18n="svc_2_t">Mobile apps</dt><dd data-i18n="svc_2_d">Native-feeling iOS &amp; Android apps for ordering, booking and everyday business.</dd></div>
+          <div class="cap rv"><dt data-i18n="svc_3_t">Custom systems</dt><dd data-i18n="svc_3_d">Inventory, staff, sales and reporting — software shaped around how you work.</dd></div>
+          <div class="cap rv"><dt data-i18n="svc_4_t">POS terminals</dt><dd data-i18n="svc_4_d">Touchscreen cashier stations, ready to sell from day one.</dd></div>
+          <div class="cap rv"><dt data-i18n="svc_5_t">Printers</dt><dd data-i18n="svc_5_d">Receipt and label printers that pair straight into your POS.</dd></div>
+          <div class="cap rv"><dt data-i18n="svc_6_t">Barcode scanners</dt><dd data-i18n="svc_6_d">Fast, reliable scanning for checkout and stock control.</dd></div>
+          <div class="cap rv"><dt data-i18n="svc_7_t">Card readers</dt><dd data-i18n="svc_7_d">Payment and card devices, connected to your cashier setup.</dd></div>
+          <div class="cap rv"><dt data-i18n="svc_8_t">Setup &amp; support</dt><dd data-i18n="svc_8_d">Installation, training and help when something needs a fix.</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ================= Work ================= -->
+    <section class="band band--night band-pad" id="work">
+      <div class="wrap">
+        <div class="head rv">
+          <p class="label"><span data-i18n="work_eyebrow">our work</span></p>
+          <h2 class="head__title" data-i18n="work_title">Projects we've shipped</h2>
+          <p class="head__lead" data-i18n="work_lead">Real software we've designed and built — from booking platforms to business systems.</p>
+        </div>
+
+        <div class="filters rv" id="filters" role="group" aria-label="Filter projects">
+          <button class="filter is-on" type="button" data-filter="all" aria-pressed="true" data-i18n="work_f_all">All</button>
+          <button class="filter" type="button" data-filter="websites" aria-pressed="false" data-i18n="work_f_web">Websites</button>
+          <button class="filter" type="button" data-filter="apps" aria-pressed="false" data-i18n="work_f_apps">Apps</button>
+        </div>
+
+        <div class="works" id="works"></div>
+      </div>
+    </section>
+
+    <!-- Project detail -->
+    <div class="modal" id="modal" aria-hidden="true">
+      <button class="modal__scrim" type="button" id="scrim" aria-label="Close"></button>
+      <div class="modal__sheet" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button class="modal__close" type="button" id="modalClose" aria-label="Close">&times;</button>
+        <img class="modal__shot" id="modalShot" src="" alt="" />
+        <p class="label" id="modalCat"></p>
+        <h3 class="modal__title" id="modalTitle"></h3>
+        <p class="modal__desc" id="modalDesc"></p>
+        <div class="modal__tech" id="modalTech"></div>
+        <div class="modal__links" id="modalLinks"></div>
+      </div>
+    </div>
+
+    <!-- ================= Why ================= -->
+    <section class="band band--paper band-pad" id="why">
+      <div class="wrap">
+        <div class="head rv">
+          <p class="label"><span data-i18n="why_eyebrow">why bernici</span></p>
+          <h2 class="head__title" data-i18n="why_title">Why businesses choose us</h2>
+        </div>
+
+        <div class="why">
+          <article class="why__item rv"><span class="why__n">01</span><div><h3 data-i18n="why_1_t">One partner, not two</h3><p data-i18n="why_1_d">Software and hardware from the same team, built to work together — no blaming each other when something breaks.</p></div></article>
+          <article class="why__item rv"><span class="why__n">02</span><div><h3 data-i18n="why_2_t">Built for Libya</h3><p data-i18n="why_2_d">Arabic-first when you need it, fast on local connections, and priced for the market here.</p></div></article>
+          <article class="why__item rv"><span class="why__n">03</span><div><h3 data-i18n="why_3_t">Modern technology</h3><p data-i18n="why_3_d">Current tools and clean design — the same standard you'd expect from a company abroad.</p></div></article>
+          <article class="why__item rv"><span class="why__n">04</span><div><h3 data-i18n="why_4_t">We stay after the sale</h3><p data-i18n="why_4_d">Setup, training and ongoing support. We're here after the invoice, not just before it.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Process ================= -->
+    <section class="band band--tint band-pad" id="process">
+      <div class="wrap">
+        <div class="head rv">
+          <p class="label"><span data-i18n="proc_eyebrow">how it works</span></p>
+          <h2 class="head__title" data-i18n="proc_title">Three steps to live</h2>
+        </div>
+
+        <ol class="proc">
+          <li class="proc__item rv"><span class="proc__k">STEP 01</span><h3 data-i18n="proc_1_t">Talk</h3><p data-i18n="proc_1_d">Tell us your business and what you need. We advise on the right mix of software and hardware.</p></li>
+          <li class="proc__item rv"><span class="proc__k">STEP 02</span><h3 data-i18n="proc_2_t">Build &amp; supply</h3><p data-i18n="proc_2_d">We develop your software and prepare your devices, then set everything up and train your team.</p></li>
+          <li class="proc__item rv"><span class="proc__k">STEP 03</span><h3 data-i18n="proc_3_t">Support</h3><p data-i18n="proc_3_d">You go live — and we stay on call for updates, fixes and whatever you grow into next.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ================= Contact ================= -->
+    <section class="band band--night band-pad" id="contact">
+      <div class="wrap">
+        <div class="contact__grid">
+          <div class="rv">
+            <p class="label"><span data-i18n="contact_eyebrow">get in touch</span></p>
+            <h2 class="head__title" data-i18n="contact_title">Let's build it together</h2>
+            <p class="head__lead" data-i18n="contact_lead">Send a message and we'll get back to you fast. Prefer to talk? Reach us on WhatsApp or by phone.</p>
+
+            <div class="methods">
+              <a class="method" href="https://wa.me/218910198105" target="_blank" rel="noopener">
+                <span class="method__ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" fill-rule="evenodd"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm4.52 11.86c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43l-.48-.01c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></svg></span>
+                <span><span class="method__k" data-i18n="contact_wa">WhatsApp</span><span class="method__v" dir="ltr">+218 91 019 8105</span></span>
+              </a>
+
+              <a class="method" href="tel:+218910198105">
+                <span class="method__ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></span>
+                <span><span class="method__k" data-i18n="contact_phone">Phone</span><span class="method__v" dir="ltr">+218 91 019 8105</span></span>
+              </a>
+
+              <div class="method">
+                <span class="method__ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+                <span><span class="method__k" data-i18n="contact_addr">Visit us</span><span class="method__v" data-i18n="contact_addr_val">22 Agadir Street, Beloun, Benghazi</span><span class="method__s" data-i18n="contact_addr_sub">Serving all of Libya</span></span>
+              </div>
+            </div>
+
+            <div class="socials">
+              <a href="#" class="social" aria-label="TikTok"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M16.5 2h-3v13.2a2.7 2.7 0 1 1-2.4-2.68V9.4a5.9 5.9 0 1 0 5.4 5.87V8.9a6.9 6.9 0 0 0 4 1.28V7.1a3.9 3.9 0 0 1-3.9-3.9V2Z"/></svg></a>
+              <a href="#" class="social" aria-label="Instagram"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+              <a href="#" class="social" aria-label="Facebook"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M14 9h3V6h-3c-1.66 0-3 1.34-3 3v2H9v3h2v6h3v-6h2.5l.5-3h-3V9c0-.55.45-1 1-1Z"/></svg></a>
+            </div>
+          </div>
+
+          <form class="form rv" id="form" novalidate>
+            <p class="form__hd" data-i18n="nav_cta">Get started</p>
+
+            <div class="field">
+              <label for="cName" data-i18n="form_name">Name</label>
+              <input type="text" id="cName" name="name" autocomplete="name" required data-i18n-ph="form_name_ph" placeholder="Your name" />
+            </div>
+
+            <div class="field">
+              <label for="cContact" data-i18n="form_contact">Phone or email</label>
+              <input type="text" id="cContact" name="contact" required dir="ltr" data-i18n-ph="form_contact_ph" placeholder="How we reach you" />
+            </div>
+
+            <div class="field">
+              <label for="cService" data-i18n="form_service">What do you need?</label>
+              <select id="cService" name="service">
+                <option value="website" data-i18n="form_opt_1">Website</option>
+                <option value="app" data-i18n="form_opt_2">Mobile app</option>
+                <option value="system" data-i18n="form_opt_3">Custom system</option>
+                <option value="pos" data-i18n="form_opt_4">POS / cashier hardware</option>
+                <option value="both" data-i18n="form_opt_5">Software + hardware</option>
+                <option value="other" data-i18n="form_opt_6">Something else</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="cMsg" data-i18n="form_msg">Message</label>
+              <textarea id="cMsg" name="message" rows="4" data-i18n-ph="form_msg_ph" placeholder="Tell us a little about your business..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--solid btn--block btn--lg" data-i18n="form_send">Send message</button>
+            <p class="form__note" id="formNote" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div>
+        <p class="footer__brand">Bernici Tech</p>
+        <p class="footer__tag" data-i18n="footer_tag">Software &amp; hardware for Libyan business.</p>
+      </div>
+      <nav class="footer__links" aria-label="Footer">
+        <a href="#how" data-i18n="nav_how">How it works</a>
+        <a href="#hardware" data-i18n="nav_hardware">Hardware</a>
+        <a href="#work" data-i18n="nav_work">Work</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
+      </nav>
+      <p class="footer__copy">© <span id="year">2026</span> Bernici Tech · <span data-i18n="footer_rights">Libya</span></p>
+    </div>
+  </footer>
+
+  <script src="js/translations.js"></script>
+  <script src="js/main-v2.js"></script>
+</body>
+</html>
